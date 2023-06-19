@@ -1,0 +1,8 @@
+
+def run(url):
+    try:
+        res = requests.get(url, headers=get_headers(), timeout=5)
+        format_text(res.text)
+    except Exception as e:
+        print(url)
+        print("请求数据发生异常", e)
